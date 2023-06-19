@@ -1,2 +1,3 @@
-Project Title : Image Caption Generator
+Image Caption Generator using Deep Learning and NLP
+
 
