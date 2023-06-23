@@ -1,9 +1,13 @@
-# Installing and import all the dependicies
-# pip/pip3 install tensorflow -> installing tensorflow and keras
-# pip/pip3 install opencv-python -> installing opencv package 
+# importing all the required libraries
+import os
+import pickle
+import numpy as np
+from tqdm.notebook import tqdm
 import tensorflow as tf
-from tensorflow import keras
-import cv2
-# checking the version of tensorflow and keras
-print("TensorFlow version:", tf.__version__)
-print("OpenCV version:", cv2.__version__)
+from tensorflow.keras.applications.vgg16 import VGG16,preprocess_input
+from tensorflow.keras.preprocessing.image import load_img,img_to_array
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Model
+from tensorflow.keras.utils import to_categorical,plot_model
+from tensorflow.keras.layers import Input,Dense,LSTM,Embedding,Dropout,add
